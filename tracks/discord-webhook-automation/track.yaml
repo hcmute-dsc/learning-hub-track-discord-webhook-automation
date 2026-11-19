@@ -1,0 +1,28 @@
+# Track (lộ trình). Đặc tả đầy đủ: CONTENT-SPECIFICATION §3.1
+# https://github.com/hcmute-dsc/learning-hub-docs/blob/main/docs/product/CONTENT-SPECIFICATION.md
+
+# Khóa của track trong database. KHÔNG BAO GIỜ đổi (đổi là mất tiến độ học).
+uid: 01a1f470-642e-7e05-b10d-a8eda40d0e03
+slug: discord-webhook-automation
+title: "Tự động hoá với Discord webhook"
+summary: "Học HTTP và JSON qua một việc có ích ngay: tự gửi thông báo vào Discord bằng webhook, từ curl, từ code, rồi để máy tự gửi."
+language: vi
+level: beginner
+estimatedHours: 8
+tags: [discord, webhook, http, json, automation]
+outcomes:
+  - "Đọc được một HTTP request và response: method, header, body JSON, status code"
+  - "Tạo webhook trong server Discord riêng và gửi tin nhắn bằng curl"
+  - "Soạn tin nhắn có embed, đổi tên và ảnh người gửi, chặn mention ngoài ý muốn"
+  - "Viết script Python hoặc Node.js gửi thông báo, đọc webhook URL từ biến môi trường"
+  - "Giữ webhook URL bí mật bằng .env, .gitignore và GitHub Secrets, và biết thu hồi khi lỡ lộ"
+maintainers: [github:TienNHM]
+license: CC-BY-SA-4.0
+position: 200
+# Chương 6–8 (tự động theo lịch, rate limit, dự án cuối) sẽ thêm ở PR sau.
+modules:
+  - 01-http-json
+  - 02-first-webhook
+  - 03-rich-messages
+  - 04-send-from-code
+  - 05-keeping-secrets

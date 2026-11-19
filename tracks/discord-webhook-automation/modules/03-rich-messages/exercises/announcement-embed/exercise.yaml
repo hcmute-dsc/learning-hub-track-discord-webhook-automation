@@ -1,0 +1,22 @@
+uid: 94079e5c-22ea-4897-b4e7-7cdd0912f60a
+slug: announcement-embed
+title: "Thông báo sự kiện bằng embed"
+type: project
+difficulty: medium
+lesson: embeds
+estimatedMinutes: 45
+requiresReview: true
+prerequisites:
+  - discord-webhook-automation/first-webhook/first-message
+authors: [github:TienNHM]
+spec:
+  deliverable: link
+  rubric:
+    - criterion: "JSON hợp lệ, gửi được (ảnh chụp tin nhắn trong server riêng)"
+      weight: 3
+    - criterion: "Embed dùng đủ title, description, color, ít nhất 2 fields, footer và timestamp"
+      weight: 2
+    - criterion: "Có allowed_mentions chặn mention, không lộ webhook URL"
+      weight: 2
+    - criterion: "Nội dung rõ ràng, dễ đọc trên điện thoại"
+      weight: 1

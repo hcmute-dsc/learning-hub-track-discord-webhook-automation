@@ -1,0 +1,10 @@
+uid: 7506dae3-da70-4457-8d00-2c9ed0674bbb
+slug: keeping-secrets
+title: "Chương 5: Giữ bí mật"
+summary: "Giữ webhook URL ngoài code bằng .env và GitHub Secrets, và thu hồi đúng cách khi lỡ lộ."
+lessons:
+  - 01-webhook-url-is-a-secret
+  - 02-github-secrets
+exercises:
+  - secrets-quiz
+  - secret-hygiene

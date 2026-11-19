@@ -1,0 +1,47 @@
+uid: 2280b64e-9f93-43d5-a954-850c3fdd7a15
+slug: secrets-quiz
+title: "Kiểm tra: giữ bí mật"
+type: quiz
+difficulty: easy
+lesson: webhook-url-is-a-secret
+estimatedMinutes: 10
+authors: [github:TienNHM]
+spec:
+  passScore: 0.8
+  questions:
+    - id: q1
+      type: single
+      prompt: "Bạn lỡ push webhook URL lên GitHub. Việc đầu tiên cần làm là gì?"
+      options:
+        - "Commit một bản mới đã xóa URL"
+        - "Xóa webhook trong Discord rồi tạo webhook mới"
+        - "Chuyển repo sang private"
+      answer: 1
+      explanation: "URL vẫn nằm trong lịch sử Git và có thể đã bị bot quét. Chỉ xóa webhook mới làm URL cũ vô dụng."
+    - id: q2
+      type: multiple
+      prompt: "Những file nào nên commit lên repo?"
+      options: [".env", ".env.example (chỉ có tên biến)", ".gitignore có dòng .env", "send.py đọc os.environ"]
+      answer: [1, 2, 3]
+      explanation: "Chỉ `.env` chứa giá trị thật; nó phải nằm ngoài Git."
+    - id: q3
+      type: single
+      prompt: "Lệnh nào cho xem chính xác nội dung sắp được commit?"
+      options: ["git log", "git diff --staged", "git push --dry-run"]
+      answer: 1
+      explanation: "`git diff --staged` in mọi thay đổi đã `git add`."
+    - id: q4
+      type: single
+      prompt: "Trong workflow, cách nào đưa secret vào lệnh curl đúng như bài học?"
+      options:
+        - 'Đặt env: WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }} rồi dùng "$WEBHOOK_URL"'
+        - "Ghi thẳng URL vào file workflow"
+        - "In secret ra log để kiểm tra rồi copy vào lệnh"
+      answer: 0
+      explanation: "Secret vào biến môi trường của bước, lệnh chỉ đọc biến đó."
+    - id: q5
+      type: single
+      prompt: "Một PR từ fork chạy workflow của repo bạn. Workflow đó có đọc được DISCORD_WEBHOOK_URL không?"
+      options: ["Có", "Không"]
+      answer: 1
+      explanation: "GitHub không đưa secret cho workflow chạy từ PR của fork."
