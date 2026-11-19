@@ -1,0 +1,10 @@
+uid: 18554bb7-5f2b-4d3b-b7a3-e30131782f01
+slug: scheduled-automation
+title: "Tự động theo lịch"
+summary: "Để GitHub Actions tự gửi nhắc lịch theo giờ hẹn, và báo vào Discord khi một workflow bị lỗi."
+lessons:
+  - 01-cron-schedule
+  - 02-notify-on-failure
+exercises:
+  - schedule-quiz
+  - weekly-reminder

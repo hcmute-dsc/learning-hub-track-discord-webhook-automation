@@ -1,0 +1,10 @@
+uid: 4d1cc2a7-d684-478f-acb3-1993e8c7198d
+slug: rate-limits
+title: "Giới hạn và lỗi"
+summary: "Hiểu rate limit của Discord, thử lại đúng lúc và có giới hạn, và ghi log để biết chuyện gì đã xảy ra."
+lessons:
+  - 01-rate-limits
+  - 02-retry
+exercises:
+  - rate-limit-quiz
+  - add-retry

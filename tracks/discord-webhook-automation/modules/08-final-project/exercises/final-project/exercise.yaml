@@ -1,0 +1,25 @@
+uid: 28a778cc-f678-41be-91a5-8f5897083f47
+slug: final-project
+title: "Dự án cuối: bot thông báo"
+type: project
+difficulty: hard
+lesson: project-guide
+estimatedMinutes: 240
+requiresReview: true
+prerequisites:
+  - discord-webhook-automation/scheduled-automation/weekly-reminder
+  - discord-webhook-automation/rate-limits/add-retry
+authors: [github:TienNHM]
+spec:
+  deliverable: github_repo_or_pr
+  rubric:
+    - criterion: "Chạy tự động đúng như README (schedule hoặc sự kiện), có link lần chạy thành công và ảnh chụp"
+      weight: 30
+    - criterion: "Secret an toàn: URL trong GitHub Secrets, không có trong lịch sử commit, .env trong .gitignore"
+      weight: 20
+    - criterion: "Chịu lỗi: thử lại có giới hạn, dừng với 4xx, thoát với mã lỗi, job báo lỗi if: failure()"
+      weight: 20
+    - criterion: "Tin nhắn: embed rõ ràng, allowed_mentions, gộp tin khi nhiều mục, đọc tốt trên điện thoại"
+      weight: 15
+    - criterion: "README đủ: bot làm gì, giờ chạy theo giờ Việt Nam, cách cài, cách chạy thử"
+      weight: 15

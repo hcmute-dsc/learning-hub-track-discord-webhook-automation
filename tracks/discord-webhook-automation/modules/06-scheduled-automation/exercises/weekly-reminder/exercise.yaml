@@ -1,0 +1,24 @@
+uid: 98797f77-01f7-4ab3-98b2-5111615c07b2
+slug: weekly-reminder
+title: "Nhắc lịch hằng tuần"
+type: project
+difficulty: medium
+lesson: cron-schedule
+estimatedMinutes: 60
+requiresReview: true
+prerequisites:
+  - discord-webhook-automation/keeping-secrets/secret-hygiene
+authors: [github:TienNHM]
+spec:
+  deliverable: github_repo_or_pr
+  rubric:
+    - criterion: "Workflow có schedule đúng giờ Việt Nam đã chọn (cron đổi sang UTC đúng) và workflow_dispatch"
+      weight: 3
+    - criterion: "Đã chạy ít nhất một lần thành công (link lần chạy trong README, ảnh chụp tin nhắn)"
+      weight: 3
+    - criterion: "Webhook URL nằm trong GitHub Secrets; JSON tạo bằng jq hoặc code; có allowed_mentions"
+      weight: 2
+    - criterion: "Có job báo lỗi với if: failure() và link tới lần chạy"
+      weight: 1
+    - criterion: "README ghi giờ chạy theo giờ Việt Nam và cách đổi lịch"
+      weight: 1
