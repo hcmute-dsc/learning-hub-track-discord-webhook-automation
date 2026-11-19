@@ -1,0 +1,24 @@
+uid: fdc30828-c55f-4c95-9205-07628415dc7d
+slug: notify-script
+title: "Script gửi thông báo"
+type: project
+difficulty: medium
+lesson: python
+estimatedMinutes: 90
+requiresReview: true
+prerequisites:
+  - discord-webhook-automation/rich-messages/announcement-embed
+authors: [github:TienNHM]
+spec:
+  deliverable: github_repo_or_pr
+  rubric:
+    - criterion: "Chạy được theo README, gửi được tin nhắn có embed"
+      weight: 3
+    - criterion: "Đọc WEBHOOK_URL từ biến môi trường; repo không chứa webhook URL thật, .env nằm trong .gitignore"
+      weight: 3
+    - criterion: "Báo lỗi rõ ràng khi thiếu URL, khi Discord trả lỗi, khi mất mạng"
+      weight: 2
+    - criterion: "Có allowed_mentions; tạo JSON bằng thư viện, không ghép chuỗi"
+      weight: 1
+    - criterion: "README nói script làm gì, cách cài, cách chạy, có ảnh chụp kết quả"
+      weight: 1

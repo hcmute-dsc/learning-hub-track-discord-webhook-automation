@@ -1,0 +1,13 @@
+uid: 8c3a8289-a8e0-4d98-b774-9fcb3aaba6d4
+slug: create-webhook
+title: "Tạo server và webhook riêng"
+type: self_check
+difficulty: easy
+lesson: what-is-a-webhook
+estimatedMinutes: 15
+authors: [github:TienNHM]
+spec:
+  checklist:
+    - "Đã tạo một server Discord riêng để thử, không dùng server CLB"
+    - "Đã tạo webhook trỏ vào một kênh trong server đó"
+    - "Đã copy webhook URL và cất ở chỗ chỉ mình đọc được (không dán vào chat, không chụp màn hình)"

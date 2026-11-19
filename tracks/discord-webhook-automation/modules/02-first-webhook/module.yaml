@@ -1,0 +1,10 @@
+uid: b6a75f97-c1df-48f8-84c8-b715278711af
+slug: first-webhook
+title: "Chương 2: Webhook đầu tiên"
+summary: "Tạo webhook trong server Discord riêng và gửi tin nhắn đầu tiên bằng curl."
+lessons:
+  - 01-what-is-a-webhook
+  - 02-send-with-curl
+exercises:
+  - create-webhook
+  - first-message

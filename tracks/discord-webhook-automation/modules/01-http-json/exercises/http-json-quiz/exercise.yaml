@@ -1,0 +1,44 @@
+uid: ece4ad92-8ddb-4fca-84e5-7a9ad2cef219
+slug: http-json-quiz
+title: "Kiểm tra: HTTP và JSON"
+type: quiz
+difficulty: easy
+lesson: json
+estimatedMinutes: 10
+authors: [github:TienNHM]
+spec:
+  passScore: 0.7
+  questions:
+    - id: q1
+      type: single
+      prompt: "Gửi một tin nhắn mới qua webhook dùng HTTP method nào?"
+      options: ["GET", "POST", "DELETE"]
+      answer: 1
+      explanation: "`POST` dùng để gửi dữ liệu mới lên server."
+    - id: q2
+      type: single
+      prompt: "Discord trả `204 No Content`. Điều đó nghĩa là gì?"
+      options: ["Tin nhắn đã gửi thành công, body rỗng", "Webhook không tồn tại", "Gửi quá nhanh, phải chờ"]
+      answer: 0
+      explanation: "Nhóm 2xx là thành công; 204 nghĩa là không có body trả về."
+    - id: q3
+      type: single
+      prompt: "Status code nào báo bạn đang gửi quá nhanh?"
+      options: ["404", "429", "500"]
+      answer: 1
+      explanation: "`429 Too Many Requests` là rate limit."
+    - id: q4
+      type: multiple
+      prompt: "Những dòng nào là JSON hợp lệ?"
+      options:
+        - '{"content": "Xin chào"}'
+        - "{'content': 'Xin chào'}"
+        - '{"tts": false, "embeds": []}'
+        - '{"content": "Xin chào",}'
+      answer: [0, 2]
+      explanation: "JSON bắt buộc nháy kép và không cho dấu phẩy thừa ở cuối."
+    - id: q5
+      type: short_text
+      prompt: "Tùy chọn nào của curl in ra cả status code và header của response?"
+      answer: ["-i", "--include"]
+      explanation: "`curl -i` (hoặc `--include`) in status, header rồi tới body."

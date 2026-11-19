@@ -1,0 +1,40 @@
+uid: a0eaf7e0-e78e-4e1c-a254-80e5aa525793
+slug: rich-message-quiz
+title: "Kiểm tra: tin nhắn đẹp hơn"
+type: quiz
+difficulty: easy
+lesson: embeds
+estimatedMinutes: 10
+authors: [github:TienNHM]
+spec:
+  passScore: 0.7
+  questions:
+    - id: q1
+      type: single
+      prompt: "Màu `#FF0000` (đỏ) ghi vào trường `color` của embed thế nào?"
+      options: ['"#FF0000"', "16711680", "0xFF0000"]
+      answer: 1
+      explanation: "`color` là số thập phân: int('FF0000', 16) = 16711680. JSON không có dạng 0x."
+    - id: q2
+      type: single
+      prompt: "Tin nhắn tự động lấy tiêu đề PR làm nội dung. Thêm gì để không ai bị ping ngoài ý muốn?"
+      options: ['"tts": false', '"allowed_mentions": {"parse": []}', '"flags": 0']
+      answer: 1
+      explanation: "`parse` rỗng tắt mọi mention, kể cả @everyone."
+    - id: q3
+      type: multiple
+      prompt: "Những `username` nào Discord sẽ từ chối?"
+      options: ["Discord Bot", "Nhắc lịch CLB", "clyde", "Báo deploy"]
+      answer: [0, 2]
+      explanation: "`username` không được chứa chữ discord hoặc clyde."
+    - id: q4
+      type: single
+      prompt: "`content` của một tin nhắn dài tối đa bao nhiêu ký tự?"
+      options: ["256", "2000", "6000"]
+      answer: 1
+      explanation: "2000 ký tự. 256 là giới hạn của title embed, 6000 là tổng chữ của mọi embed."
+    - id: q5
+      type: short_text
+      prompt: "Trong một embed, mảng nào chứa các cột name/value?"
+      answer: ["fields", '"fields"']
+      explanation: "`fields`, mỗi phần tử có name, value và inline (tuỳ chọn)."

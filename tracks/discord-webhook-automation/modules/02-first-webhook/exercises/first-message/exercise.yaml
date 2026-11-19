@@ -1,0 +1,16 @@
+uid: c7633fe4-effa-45ca-bc48-cfef0037c60f
+slug: first-message
+title: "Gửi tin nhắn đầu tiên"
+type: self_check
+difficulty: easy
+lesson: send-with-curl
+estimatedMinutes: 20
+prerequisites:
+  - discord-webhook-automation/first-webhook/create-webhook
+authors: [github:TienNHM]
+spec:
+  checklist:
+    - "Đã đặt biến môi trường WEBHOOK_URL, không gõ thẳng URL vào lệnh"
+    - "Đã gửi tin từ message.json bằng curl và thấy status 204"
+    - "Đã gửi lại với ?wait=true và tìm được id của tin nhắn trong JSON trả về"
+    - "Đã cố tình gửi một JSON sai (ví dụ thêm dấu phẩy thừa) và đọc được thông báo lỗi 400"

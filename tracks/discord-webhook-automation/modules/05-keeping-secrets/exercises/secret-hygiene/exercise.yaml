@@ -1,0 +1,17 @@
+uid: 79ea9d52-2c54-4c29-ad02-c6179b1a9373
+slug: secret-hygiene
+title: "Dọn secret và chạy bằng GitHub Actions"
+type: self_check
+difficulty: medium
+lesson: github-secrets
+estimatedMinutes: 40
+prerequisites:
+  - discord-webhook-automation/send-from-code/notify-script
+authors: [github:TienNHM]
+spec:
+  checklist:
+    - "Repo bài notify-script có .gitignore chứa .env và có .env.example không chứa giá trị thật"
+    - "Đã tìm trong toàn bộ lịch sử commit (git log -p) và không thấy webhook URL thật"
+    - "Đã tạo secret DISCORD_WEBHOOK_URL trong repo đó"
+    - "Đã thêm workflow chạy bằng tay (workflow_dispatch) gửi được tin vào server riêng"
+    - "Đã thử xóa một webhook cũ trong Discord và thấy URL cũ trả 404 Unknown Webhook"
