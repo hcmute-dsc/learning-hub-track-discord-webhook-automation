@@ -1,6 +1,6 @@
 uid: 3259244f-83db-4b73-9ad1-42c5b68486a1
 slug: send-from-code
-title: "Chương 4: Gửi từ code"
+title: "Gửi từ code"
 summary: "Viết script Python hoặc Node.js gửi thông báo, đọc webhook URL từ biến môi trường."
 lessons:
   - 01-python
