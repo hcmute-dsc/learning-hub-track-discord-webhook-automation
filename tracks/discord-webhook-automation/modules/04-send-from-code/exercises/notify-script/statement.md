@@ -12,4 +12,4 @@ Viết một script **Python hoặc Node.js** nhận nội dung từ dòng lện
 
 Một repo GitHub public gồm script, `.gitignore` (có `.env`) và `README.md`: script làm gì, cài gì, chạy thế nào, kèm ảnh chụp tin nhắn trong Discord.
 
-Trước khi push, chạy `git log -p | grep -i "discord.com/api/webhooks"` (hoặc tìm trong VS Code). Không được có kết quả nào là URL thật. Lỡ commit rồi thì làm theo chương 5: **xóa webhook trong Discord trước**, rồi mới sửa repo.
+Trước khi push, tìm trong toàn bộ lịch sử commit: `git log -p | grep -i "discord.com/api/webhooks/"` (Git Bash, macOS, Linux) hoặc `git log -p | Select-String "discord.com/api/webhooks/"` (PowerShell). Không được có kết quả nào là URL thật. Lỡ commit rồi thì làm theo chương 5: **xóa webhook trong Discord trước**, rồi mới sửa repo.

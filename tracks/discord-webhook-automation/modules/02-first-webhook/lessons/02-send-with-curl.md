@@ -80,7 +80,7 @@ curl.exe -s -H "Content-Type: application/json" -d "@message.json" "$($env:WEBHO
 | `400` và `"message": "The request body contains invalid JSON."` | JSON sai cú pháp: kiểm tra lại như bài JSON |
 | `400` và lỗi `content` quá dài | `content` tối đa 2000 ký tự |
 | `401` hoặc `404` và `"Unknown Webhook"` | URL sai, thiếu ký tự, hoặc webhook đã bị xóa |
-| `curl: (3) URL rejected` / không có gì xảy ra | Biến `WEBHOOK_URL` chưa đặt trong terminal này |
+| curl báo `no URL specified` hoặc `URL rejected` | Biến `WEBHOOK_URL` chưa đặt trong terminal này |
 
 ## Tóm tắt
 

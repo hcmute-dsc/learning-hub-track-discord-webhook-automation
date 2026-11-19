@@ -16,6 +16,8 @@ authors: [github:TienNHM]
 
 ## Hai cấu trúc
 
+Ví dụ dưới đây chỉ để xem cú pháp; chương 2 mới gửi tin nhắn thật.
+
 - **Object**: cặp `"khóa": giá trị`, đặt trong `{ }`, cách nhau bằng dấu phẩy.
 - **Array**: danh sách giá trị, đặt trong `[ ]`.
 
