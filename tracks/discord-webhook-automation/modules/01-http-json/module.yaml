@@ -1,6 +1,6 @@
 uid: 22552cf5-92aa-467e-80fb-12a6de7882c4
 slug: http-json
-title: "Chương 1: HTTP và JSON tối thiểu"
+title: "HTTP và JSON tối thiểu"
 summary: "Đủ HTTP và JSON để đọc hiểu mọi request gửi tới Discord ở các chương sau."
 lessons:
   - 01-http-request-response
