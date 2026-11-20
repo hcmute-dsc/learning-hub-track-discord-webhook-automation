@@ -1,0 +1,17 @@
+uid: d59d41a9-05a2-472d-8c44-a2c46a324017
+slug: add-retry
+title: "Thêm thử lại vào script"
+type: self_check
+difficulty: medium
+lesson: retry
+estimatedMinutes: 45
+prerequisites:
+  - discord-webhook-automation/send-from-code/notify-script
+authors: [github:TienNHM]
+spec:
+  checklist:
+    - "Script bài notify-script có hàm gửi thử lại tối đa 3 lần"
+    - "Gặp 429 thì chờ đúng retry_after; gặp 5xx hoặc mất mạng thì chờ tăng dần"
+    - "Gặp 4xx khác 429 thì dừng ngay, không thử lại"
+    - "Mỗi lần thử in một dòng log có số lần, kết quả và việc sẽ làm"
+    - "Thất bại thì thoát với mã lỗi khác 0 (đã kiểm tra bằng URL sai và bằng cách tắt mạng)"

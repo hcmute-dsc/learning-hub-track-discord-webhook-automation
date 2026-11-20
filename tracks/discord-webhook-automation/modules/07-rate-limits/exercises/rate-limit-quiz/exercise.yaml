@@ -1,0 +1,44 @@
+uid: 715f7627-a612-4077-a805-c1a66d67a690
+slug: rate-limit-quiz
+title: "Kiểm tra: rate limit và thử lại"
+type: quiz
+difficulty: medium
+lesson: retry
+estimatedMinutes: 10
+authors: [github:TienNHM]
+spec:
+  passScore: 0.8
+  questions:
+    - id: q1
+      type: single
+      prompt: "Discord trả `429` với body `{\"retry_after\": 1.5}`. Nên làm gì?"
+      options: ["Gửi lại ngay", "Chờ 1.5 giây rồi gửi lại", "Dừng hẳn, không gửi nữa"]
+      answer: 1
+      explanation: "`retry_after` là số giây cần chờ; sau đó gửi lại là được."
+    - id: q2
+      type: single
+      prompt: "Discord trả `404 Unknown Webhook`. Hàm send nên làm gì?"
+      options: ["Thử lại 3 lần", "Chờ 2 giây rồi thử lại", "Dừng ngay và báo lỗi"]
+      answer: 2
+      explanation: "Lỗi 4xx (trừ 429) do request sai; gửi lại y hệt cũng lỗi y hệt."
+    - id: q3
+      type: multiple
+      prompt: "Vì sao không được gửi lại liên tục, không giới hạn khi gặp lỗi?"
+      options:
+        - "Quá nhiều request lỗi có thể làm IP bị chặn tạm thời"
+        - "Discord tính tiền theo số request"
+        - "Lỗi do request sai thì gửi lại vẫn sai"
+        - "Workflow chạy mãi không dừng"
+      answer: [0, 2, 3]
+      explanation: "Webhook miễn phí; vấn đề là IP bị chặn, lỗi lặp lại và workflow treo."
+    - id: q4
+      type: single
+      prompt: "Cần gửi 25 bài RSS mới. Cách nào ít request nhất?"
+      options: ["25 tin, mỗi tin 1 embed", "3 tin, mỗi tin tối đa 10 embed", "1 tin có 25 embed"]
+      answer: 1
+      explanation: "Một tin có tối đa 10 embed, nên 25 bài cần 3 tin."
+    - id: q5
+      type: short_text
+      prompt: "Header nào cho biết còn bao nhiêu request trong đợt hiện tại?"
+      answer: ["X-RateLimit-Remaining", "x-ratelimit-remaining"]
+      explanation: "`X-RateLimit-Remaining`, đi cùng `X-RateLimit-Limit` và `X-RateLimit-Reset-After`."

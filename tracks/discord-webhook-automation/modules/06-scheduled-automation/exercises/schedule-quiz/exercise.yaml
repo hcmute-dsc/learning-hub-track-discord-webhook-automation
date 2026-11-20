@@ -1,0 +1,44 @@
+uid: 5cf49ac5-f957-4861-89b6-751bf4be8a6b
+slug: schedule-quiz
+title: "Kiểm tra: lịch và báo lỗi"
+type: quiz
+difficulty: easy
+lesson: cron-schedule
+estimatedMinutes: 10
+authors: [github:TienNHM]
+spec:
+  passScore: 0.7
+  questions:
+    - id: q1
+      type: single
+      prompt: "Muốn workflow chạy lúc 08:00 sáng thứ Hai giờ Việt Nam. Cron nào đúng?"
+      options: ["`0 8 * * 1`", "`0 1 * * 1`", "`0 15 * * 1`"]
+      answer: 1
+      explanation: "Cron của GitHub Actions theo UTC; 08:00 giờ VN (UTC+7) là 01:00 UTC."
+    - id: q2
+      type: single
+      prompt: "Muốn chạy lúc 06:00 sáng thứ Hai giờ Việt Nam. Cron nào đúng?"
+      options: ["`0 23 * * 1`", "`0 23 * * 0`", "`0 6 * * 1`"]
+      answer: 1
+      explanation: "06:00 thứ Hai giờ VN là 23:00 Chủ nhật UTC; thứ 0 là Chủ nhật."
+    - id: q3
+      type: multiple
+      prompt: "Những câu nào đúng về `schedule` của GitHub Actions?"
+      options:
+        - "Có thể chạy trễ vài phút khi GitHub đông việc"
+        - "Chạy theo file workflow trên mọi nhánh"
+        - "Repo public không hoạt động 60 ngày thì lịch bị tắt"
+        - "Chạy được mỗi 1 phút"
+      answer: [0, 2]
+      explanation: "Lịch dùng file trên nhánh mặc định, và khoảng ngắn nhất là 5 phút."
+    - id: q4
+      type: single
+      prompt: "Job `notify` có `needs: test`. Thêm gì để nó chỉ chạy khi `test` lỗi?"
+      options: ["`if: always()`", "`if: failure()`", "Không cần thêm gì"]
+      answer: 1
+      explanation: "Mặc định là `success()`: job chỉ chạy khi `test` thành công."
+    - id: q5
+      type: short_text
+      prompt: "Trong `on:`, sự kiện nào cho phép bấm nút chạy workflow bằng tay?"
+      answer: ["workflow_dispatch", "workflow_dispatch:"]
+      explanation: "`workflow_dispatch` thêm nút **Run workflow** ở tab Actions."

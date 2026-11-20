@@ -1,0 +1,8 @@
+uid: c2a1291b-6b20-476a-aced-39eb1bfed173
+slug: final-project
+title: "Dự án cuối"
+summary: "Tự làm một bot thông báo hoàn chỉnh: chạy tự động, giữ bí mật, chịu được lỗi."
+lessons:
+  - 01-project-guide
+exercises:
+  - final-project
