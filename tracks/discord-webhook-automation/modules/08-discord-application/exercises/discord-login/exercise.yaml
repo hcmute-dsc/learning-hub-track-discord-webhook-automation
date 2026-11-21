@@ -1,0 +1,24 @@
+uid: 09a8f412-98d1-46d5-807a-1ccd040330d2
+slug: discord-login
+title: "Đăng nhập bằng Discord"
+type: project
+difficulty: medium
+lesson: oauth2-login
+estimatedMinutes: 90
+requiresReview: true
+prerequisites:
+  - discord-webhook-automation/keeping-secrets/secret-hygiene
+authors: [github:TienNHM]
+spec:
+  deliverable: github_repo_or_pr
+  rubric:
+    - criterion: "Đăng nhập chạy được: mở trang, đồng ý trên Discord, trang hiện tên và id (có ảnh chụp hoặc GIF trong README, đã che id)"
+      weight: 3
+    - criterion: "Client Secret nằm ngoài repo (.env có trong .gitignore, lịch sử commit sạch); chỉ xin scope identify"
+      weight: 3
+    - criterion: "Kiểm tra state, xử lý được khi người dùng bấm Hủy bỏ, escape tên trước khi đưa vào HTML"
+      weight: 2
+    - criterion: "Gửi một tin chào mừng vào kênh qua webhook, tag đúng người vừa đăng nhập, allowed_mentions chỉ chứa id đó"
+      weight: 1
+    - criterion: "README ghi cách tạo application, redirect cần khai báo, các biến môi trường và lệnh chạy"
+      weight: 1

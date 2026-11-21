@@ -8,8 +8,8 @@ title: "Tự động hoá với Discord webhook"
 summary: "Học HTTP và JSON qua một việc có ích ngay: tự gửi thông báo vào Discord bằng webhook, từ curl, từ code, rồi để máy tự gửi."
 language: vi
 level: beginner
-estimatedHours: 14
-tags: [discord, webhook, http, json, automation]
+estimatedHours: 17
+tags: [discord, webhook, http, json, automation, oauth2]
 outcomes:
   - "Đọc được một HTTP request và response: method, header, body JSON, status code"
   - "Tạo webhook trong server Discord riêng và gửi tin nhắn bằng curl"
@@ -17,6 +17,7 @@ outcomes:
   - "Viết script Python hoặc Node.js gửi thông báo, đọc webhook URL từ biến môi trường"
   - "Giữ webhook URL bí mật bằng .env, .gitignore và GitHub Secrets, và biết thu hồi khi lỡ lộ"
   - "Tự động gửi thông báo theo lịch bằng GitHub Actions, thử lại đúng cách khi gặp rate limit"
+  - "Tạo Discord application, cho người dùng đăng nhập bằng Discord với OAuth2 và tag đúng người bằng id"
 maintainers: [github:TienNHM]
 license: CC-BY-SA-4.0
 position: 200
@@ -28,4 +29,5 @@ modules:
   - 05-keeping-secrets
   - 06-scheduled-automation
   - 07-rate-limits
-  - 08-final-project
+  - 08-discord-application
+  - 09-final-project

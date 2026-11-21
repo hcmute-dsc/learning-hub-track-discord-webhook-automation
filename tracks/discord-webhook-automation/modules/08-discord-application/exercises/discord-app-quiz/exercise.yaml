@@ -1,0 +1,69 @@
+uid: e74d4e95-00f6-4a8e-9f8b-bb5ba366261b
+slug: discord-app-quiz
+title: "Kiểm tra: Discord application và OAuth2"
+type: quiz
+difficulty: medium
+lesson: mention-by-id
+estimatedMinutes: 10
+authors: [github:TienNHM]
+spec:
+  passScore: 0.8
+  questions:
+    - id: q1
+      type: single
+      prompt: "Việc nào cần tạo Discord application?"
+      options:
+        - "Gửi tin vào kênh của mình bằng curl"
+        - "Cho người dùng trang web đăng nhập bằng Discord"
+        - "Đổi tên và ảnh người gửi của webhook"
+      answer: 1
+      explanation: "Gửi tin và đổi tên người gửi chỉ cần webhook. Muốn biết người dùng là ai trên Discord thì cần OAuth2, mà OAuth2 gắn với một application."
+    - id: q2
+      type: multiple
+      prompt: "Thông tin nào phải giữ bí mật?"
+      options:
+        - "Application ID (Client ID)"
+        - "Client Secret"
+        - "Public Key"
+        - "Bot token"
+        - "Webhook URL"
+      answer: [1, 3, 4]
+      explanation: "Client ID nằm sẵn trong link đăng nhập, Public Key chỉ dùng để kiểm tra chữ ký. Ba thứ còn lại cho người khác hành động thay app của bạn."
+    - id: q3
+      type: single
+      prompt: "Vì sao app gửi `state` ngẫu nhiên khi chuyển hướng, rồi so lại ở `/callback`?"
+      options:
+        - "Để Discord biết request đến từ app nào"
+        - "Để chặn link `/callback` giả mà kẻ xấu dụ người dùng mở (CSRF)"
+        - "Để access token dùng được lâu hơn"
+      answer: 1
+      explanation: "Discord biết app nhờ `client_id`. `state` giúp app chỉ chấp nhận `/callback` của chính luồng đăng nhập nó vừa bắt đầu."
+    - id: q4
+      type: single
+      prompt: "Trang Discord báo `Invalid OAuth2 redirect_uri`. Nguyên nhân là gì?"
+      options:
+        - "Client Secret sai"
+        - "`redirect_uri` gửi lên không khớp từng ký tự với redirect đã khai báo"
+        - "Người dùng bấm Hủy bỏ"
+      answer: 1
+      explanation: "Lỗi này xảy ra trước cả khi người dùng thấy màn hình xin quyền. Secret sai chỉ lộ ra ở bước đổi `code`, còn bấm Hủy thì `/callback` nhận `error=access_denied`."
+    - id: q5
+      type: single
+      prompt: "App chỉ cần biết id và tên Discord của người dùng. Nên xin scope nào?"
+      options: ["identify", "identify email guilds", "bot"]
+      answer: 0
+      explanation: "Xin ít quyền nhất mà vẫn đủ dùng. Mỗi scope thêm là một dòng nữa trên màn hình xin quyền."
+    - id: q6
+      type: single
+      prompt: "Tin nhắn có `<@111>` trong embed và không có gì trong `content`. Người có id 111 có bị ping không?"
+      options:
+        - "Có, mọi mention đều ping"
+        - "Không, mention trong embed chỉ hiện tên, không gửi thông báo"
+        - "Chỉ khi `allowed_mentions` có `parse: [\"everyone\"]`"
+      answer: 1
+      explanation: "Chỉ mention trong `content` mới ping, và chỉ khi `allowed_mentions` cho phép."
+    - id: q7
+      type: short_text
+      prompt: "Có access token rồi, gọi endpoint nào để lấy id và tên của người đang đăng nhập? (ghi phần đường dẫn sau /api/v10)"
+      answer: ["/users/@me", "users/@me"]
+      explanation: "`GET /users/@me` với header `Authorization: Bearer <token>`."

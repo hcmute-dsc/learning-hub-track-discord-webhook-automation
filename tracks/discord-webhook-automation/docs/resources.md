@@ -3,6 +3,8 @@
 - Discord: [Webhook](https://discord.com/developers/docs/resources/webhook) (tạo, gửi, sửa, xóa tin nhắn qua webhook).
 - Discord: [Message, Embed, Allowed Mentions](https://discord.com/developers/docs/resources/message) (cấu trúc tin nhắn và giới hạn độ dài).
 - Discord: [Rate Limits](https://discord.com/developers/docs/topics/rate-limits) (HTTP 429 và `retry_after`).
+- Discord: [OAuth2](https://discord.com/developers/docs/topics/oauth2) (luồng authorization code, danh sách scope) và [User](https://discord.com/developers/docs/resources/user) (`GET /users/@me`).
+- Discord: [Developer Portal](https://discord.com/developers/applications), nơi tạo application và lấy Client ID, Client Secret.
 - Discord Support: [Intro to Webhooks](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks).
 - GitHub: [Using secrets in GitHub Actions](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions).
 

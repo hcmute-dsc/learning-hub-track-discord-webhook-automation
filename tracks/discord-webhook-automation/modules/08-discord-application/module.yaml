@@ -1,0 +1,11 @@
+uid: 699152e4-0038-4ffc-ae0d-ec2e6815656b
+slug: discord-application
+title: "Discord application và đăng nhập bằng Discord"
+summary: "Biết khi nào cần một Discord application, cho người dùng đăng nhập bằng Discord với OAuth2, rồi tag đúng người bằng user id."
+lessons:
+  - 01-what-is-an-application
+  - 02-oauth2-login
+  - 03-mention-by-id
+exercises:
+  - discord-app-quiz
+  - discord-login
