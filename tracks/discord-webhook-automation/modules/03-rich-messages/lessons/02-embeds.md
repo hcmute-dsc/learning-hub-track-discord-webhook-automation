@@ -28,7 +28,7 @@ authors: [github:TienNHM]
         { "name": "Địa điểm", "value": "Phòng A5-201", "inline": true },
         { "name": "Cần mang", "value": "Laptop đã cài curl" }
       ],
-      "footer": { "text": "DSC Learning Hub" },
+      "footer": { "text": "HCMUTE DSC Learning Hub" },
       "timestamp": "2026-11-19T12:00:00Z"
     }
   ]
